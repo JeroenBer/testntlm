@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -17,5 +17,6 @@
   </ItemGroup>
 
   <Import Project="..\SharedTests\SharedTests.projitems" Label="Shared" />
+
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentAssertions;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -12,11 +13,14 @@ namespace SharedTests
     {
         public AuthenticationTests()
         {
+            // Fixes it on .Net Core 3.1
             AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
         }
 
-        [Fact]
-        public async Task TestNtlmNetworkCredential()
+        [Theory]
+        [InlineData("testuser", "Wh9nPWEA3Xsg", "testntlm", false)]
+        [InlineData("testuser", "wrongpassword", "testntlm", true)]
+        public async Task TestNtlmNetworkCredential(string username, string password, string domain, bool expectAccessDenied)
         {
             var httpClientHandler = new HttpClientHandler()
             {
@@ -26,15 +30,39 @@ namespace SharedTests
             };
 
             // Set credentials that will be sent to the server.
-            httpClientHandler.Credentials = new NetworkCredential("testuser", "Wh9nPWEA3Xsg", "testntlm");
+            httpClientHandler.Credentials = new NetworkCredential(username, password, domain);
 
             var httpClient = new HttpClient(httpClientHandler);
 
-            var result = await httpClient.GetStringAsync("http://testntlm.westus2.cloudapp.azure.com/testntlm.htm");
+            HttpResponseMessage httpResponse = null;
+            var accessDenied = false;
+            try
+            {
+                var httpRequest = new HttpRequestMessage()
+                {
+                    Method = HttpMethod.Get,
+                    RequestUri = new Uri("http://testntlm.westus2.cloudapp.azure.com/testntlm.htm"),
+                };
+
+                httpResponse = await httpClient.SendAsync(httpRequest);
+
+                httpResponse.EnsureSuccessStatusCode();
+            }
+            catch(HttpRequestException)
+            {
+                if (httpResponse != null)
+                {
+                    accessDenied = httpResponse.StatusCode == HttpStatusCode.Unauthorized;
+                }
+            }
+
+            accessDenied.Should().Be(expectAccessDenied);
         }
 
-        [Fact]
-        public async Task TestNtlmCredentialCache()
+        [Theory]
+        [InlineData("testuser", "Wh9nPWEA3Xsg", "testntlm", false)]
+        [InlineData("testuser", "wrongpassword", "testntlm", true)]
+        public async Task TestNtlmCredentialCache(string username, string password, string domain, bool expectAccessDenied)
         {
             var httpClientHandler = new HttpClientHandler()
             {
@@ -49,13 +77,35 @@ namespace SharedTests
                 {
                     new Uri("http://testntlm.westus2.cloudapp.azure.com"),
                     "NTLM",
-                    new NetworkCredential("testuser", "Wh9nPWEA3Xsg", "testntlm")
+                    new NetworkCredential(username, password, domain)
                 }
             };
 
             var httpClient = new HttpClient(httpClientHandler);
 
-            var result = await httpClient.GetStringAsync("http://testntlm.westus2.cloudapp.azure.com/testntlm.htm");
+            HttpResponseMessage httpResponse = null;
+            var accessDenied = false;
+            try
+            {
+                var httpRequest = new HttpRequestMessage()
+                {
+                    Method = HttpMethod.Get,
+                    RequestUri = new Uri("http://testntlm.westus2.cloudapp.azure.com/testntlm.htm"),
+                };
+
+                httpResponse = await httpClient.SendAsync(httpRequest);
+
+                httpResponse.EnsureSuccessStatusCode();
+            }
+            catch (HttpRequestException)
+            {
+                if (httpResponse != null)
+                {
+                    accessDenied = httpResponse.StatusCode == HttpStatusCode.Unauthorized;
+                }
+            }
+
+            accessDenied.Should().Be(expectAccessDenied);
         }
     }
 }
