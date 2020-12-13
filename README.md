@@ -1,0 +1,2 @@
+# testntlm
+Test NTLM authentication
