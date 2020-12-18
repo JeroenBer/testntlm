@@ -9,7 +9,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedTests", "SharedTests\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNtlmCore21", "TestNtlmCore21\TestNtlmCore21.csproj", "{1BD9BCAA-3790-430A-9D14-D8D75E09746A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmCore50", "TestNtlmCore50\TestNtlmCore50.csproj", "{2DFDF8C5-76A1-4232-8CF7-EF00CEA6C39E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNtlmCore50", "TestNtlmCore50\TestNtlmCore50.csproj", "{2DFDF8C5-76A1-4232-8CF7-EF00CEA6C39E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{405F91DC-4A5C-4F53-8290-E4831D91F900}"
 	ProjectSection(SolutionItems) = preProject
@@ -26,6 +26,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedTests\SharedTests.projitems*{1bd9bcaa-3790-430a-9d14-d8d75e09746a}*SharedItemsImports = 5
 		SharedTests\SharedTests.projitems*{23597e40-fb05-4ff3-a185-86a24c5646de}*SharedItemsImports = 4
+		SharedTests\SharedTests.projitems*{2dfdf8c5-76a1-4232-8cf7-ef00cea6c39e}*SharedItemsImports = 5
 		SharedTests\SharedTests.projitems*{60795138-c57e-48d2-a734-95dce3805355}*SharedItemsImports = 4
 		SharedTests\SharedTests.projitems*{b7502701-4953-40ad-ab9e-e0fb52ebedfe}*SharedItemsImports = 13
 		SharedTests\SharedTests.projitems*{cdd00d4c-62c5-44c4-98be-8a2f4579a365}*SharedItemsImports = 5
