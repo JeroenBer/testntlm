@@ -18,9 +18,13 @@ namespace SharedTests
         }
 
         [Theory]
-        [InlineData("testuser", "Wh9nPWEA3Xsg", "testntlm", false)]
-        [InlineData("testuser", "wrongpassword", "testntlm", true)]
-        public async Task TestNtlmNetworkCredential(string username, string password, string domain, bool expectAccessDenied)
+        [InlineData("testuser", "Wh9nPWEA3Xsg", "testntlm", "http://testntlm.westus2.cloudapp.azure.com/testntlm.htm", false)]
+        [InlineData("testuser", "wrongpassword", "testntlm", "http://testntlm.westus2.cloudapp.azure.com/testntlm.htm", true)]
+        [InlineData("testuser", "abc123", "", "https://httpbin.org/basic-auth/testuser/abc123", false)]
+        [InlineData("testuser", "wrongpassword", "", "https://httpbin.org/basic-auth/testuser/abc123", true)]
+        [InlineData("testuser", "abc123", "", "https://httpbin.org/digest-auth/auth/testuser/abc123/MD5", false)]
+        [InlineData("testuser", "wrongpassword", "", "https://httpbin.org/digest-auth/auth/testuser/abc123/MD5", true)]
+        public async Task TestNetworkCredential(string username, string password, string domain, string url, bool expectAccessDenied)
         {
             var httpClientHandler = new HttpClientHandler()
             {
@@ -41,7 +45,7 @@ namespace SharedTests
                 var httpRequest = new HttpRequestMessage()
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("http://testntlm.westus2.cloudapp.azure.com/testntlm.htm"),
+                    RequestUri = new Uri(url),
                 };
 
                 httpResponse = await httpClient.SendAsync(httpRequest);
@@ -60,9 +64,13 @@ namespace SharedTests
         }
 
         [Theory]
-        [InlineData("testuser", "Wh9nPWEA3Xsg", "testntlm", false)]
-        [InlineData("testuser", "wrongpassword", "testntlm", true)]
-        public async Task TestNtlmCredentialCache(string username, string password, string domain, bool expectAccessDenied)
+        [InlineData("testuser", "Wh9nPWEA3Xsg", "testntlm", "http://testntlm.westus2.cloudapp.azure.com/testntlm.htm", "NTLM", false)]
+        [InlineData("testuser", "wrongpassword", "testntlm", "http://testntlm.westus2.cloudapp.azure.com/testntlm.htm", "NTLM", true)]
+        [InlineData("testuser", "abc123", "", "https://httpbin.org/basic-auth/testuser/abc123", "Basic", false)]
+        [InlineData("testuser", "wrongpassword", "", "https://httpbin.org/basic-auth/testuser/abc123", "Basic", true)]
+        [InlineData("testuser", "abc123", "", "https://httpbin.org/digest-auth/auth/testuser/abc123/MD5", "Digest", false)]
+        [InlineData("testuser", "wrongpassword", "", "https://httpbin.org/digest-auth/auth/testuser/abc123/MD5", "Digest", true)]
+        public async Task TestCredentialCache(string username, string password, string domain, string url, string authenticationType, bool expectAccessDenied)
         {
             var httpClientHandler = new HttpClientHandler()
             {
@@ -75,8 +83,8 @@ namespace SharedTests
             httpClientHandler.Credentials = new CredentialCache
             {
                 {
-                    new Uri("http://testntlm.westus2.cloudapp.azure.com"),
-                    "NTLM",
+                    new Uri(url),
+                    authenticationType,
                     new NetworkCredential(username, password, domain)
                 }
             };
@@ -90,7 +98,7 @@ namespace SharedTests
                 var httpRequest = new HttpRequestMessage()
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("http://testntlm.westus2.cloudapp.azure.com/testntlm.htm"),
+                    RequestUri = new Uri(url),
                 };
 
                 httpResponse = await httpClient.SendAsync(httpRequest);
