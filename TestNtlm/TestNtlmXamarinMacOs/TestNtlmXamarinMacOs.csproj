@@ -92,16 +92,8 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <None Include="Main.cs" />
-    <None Include="Main.storyboard" />
-    <None Include="Program.vb" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="AuthenticationTests.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
