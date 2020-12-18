@@ -74,14 +74,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MainActivity2.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -103,13 +101,8 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\" />
     <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TestNtlmAndroidXamarin\TestNtlmAndroidXamarin.csproj">
-      <Project>{B65216A1-E1EA-42FF-862D-D22955E0CE0F}</Project>
-      <Name>TestNtlmAndroidXamarin</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\SharedTests\SharedTests.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNtlm", "TestNtlm\TestNtlm.csproj", "{9E92D18B-B459-4AD7-A037-A3EDC1A3B7E9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNtlmCore31", "TestNtlmCore31\TestNtlmCore31.csproj", "{CDD00D4C-62C5-44C4-98BE-8A2F4579A365}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedTests", "SharedTests\SharedTests.shproj", "{B7502701-4953-40AD-AB9E-E0FB52EBEDFE}"
@@ -18,11 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmAndroid", "TestNtlmAndroid\TestNtlmAndroid.csproj", "{37DDAF50-F3B8-40A5-ACE0-90798720D4EC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmAndroidXamarin.Android", "TestNtlmAndroidXamarin\TestNtlmAndroidXamarin.Android\TestNtlmAndroidXamarin.Android.csproj", "{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmAndroidXamarin", "TestNtlmAndroidXamarin\TestNtlmAndroidXamarin\TestNtlmAndroidXamarin.csproj", "{2AFAFD1C-602D-4720-A97D-1165306C0FE9}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -36,10 +30,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E92D18B-B459-4AD7-A037-A3EDC1A3B7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E92D18B-B459-4AD7-A037-A3EDC1A3B7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E92D18B-B459-4AD7-A037-A3EDC1A3B7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E92D18B-B459-4AD7-A037-A3EDC1A3B7E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CDD00D4C-62C5-44C4-98BE-8A2F4579A365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDD00D4C-62C5-44C4-98BE-8A2F4579A365}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD00D4C-62C5-44C4-98BE-8A2F4579A365}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,22 +42,12 @@ Global
 		{2DFDF8C5-76A1-4232-8CF7-EF00CEA6C39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DFDF8C5-76A1-4232-8CF7-EF00CEA6C39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DFDF8C5-76A1-4232-8CF7-EF00CEA6C39E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37DDAF50-F3B8-40A5-ACE0-90798720D4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37DDAF50-F3B8-40A5-ACE0-90798720D4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37DDAF50-F3B8-40A5-ACE0-90798720D4EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{37DDAF50-F3B8-40A5-ACE0-90798720D4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37DDAF50-F3B8-40A5-ACE0-90798720D4EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37DDAF50-F3B8-40A5-ACE0-90798720D4EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{2AFAFD1C-602D-4720-A97D-1165306C0FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2AFAFD1C-602D-4720-A97D-1165306C0FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2AFAFD1C-602D-4720-A97D-1165306C0FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2AFAFD1C-602D-4720-A97D-1165306C0FE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
