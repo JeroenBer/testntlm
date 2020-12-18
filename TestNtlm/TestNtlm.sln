@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmXamarinAndroidMonoW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmXamariniOS", "TestNtlmiOS\TestNtlmXamariniOS.csproj", "{60795138-C57E-48D2-A734-95DCE3805355}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmXamarinMacOs", "TestNtlmXamarinMacOs\TestNtlmXamarinMacOs.csproj", "{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedTests\SharedTests.projitems*{1bd9bcaa-3790-430a-9d14-d8d75e09746a}*SharedItemsImports = 5
@@ -97,6 +99,18 @@ Global
 		{60795138-C57E-48D2-A734-95DCE3805355}.Release|iPhone.Build.0 = Release|iPhone
 		{60795138-C57E-48D2-A734-95DCE3805355}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{60795138-C57E-48D2-A734-95DCE3805355}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Release|iPhone.Build.0 = Release|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8F279F2B-D837-489D-86EC-E9D3BA7D4C4C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
