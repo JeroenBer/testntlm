@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}</ProjectGuid>
+    <ProjectGuid>{23597E40-FB05-4FF3-A185-86A24C5646DE}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TestNtlmAndroidXamarin.Droid</RootNamespace>
-    <AssemblyName>TestNtlmAndroidXamarin.Android</AssemblyName>
+    <RootNamespace>TestNtlmAndroidMonoWebRequestHandler</RootNamespace>
+    <AssemblyName>TestNtlmAndroidMonoWebRequestHandler</AssemblyName>
     <Deterministic>True</Deterministic>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -79,31 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Tabbar.xml" />
-    <AndroidResource Include="Resources\layout\Toolbar.xml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\" />
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <Import Project="..\..\SharedTests\SharedTests.projitems" Label="Shared" />
+  <ItemGroup />
+  <Import Project="..\SharedTests\SharedTests.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

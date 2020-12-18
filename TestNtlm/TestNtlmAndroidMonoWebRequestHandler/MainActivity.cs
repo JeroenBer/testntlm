@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+using System.Reflection;
 using Xunit.Runners.UI;
 using Xunit.Sdk;
 
-namespace TestNtlmAndroidXamarin.Droid
+namespace TestNtlmAndroid
 {
     [Activity(Label = "xUnit Android Runner", MainLauncher = true, Theme = "@android:style/Theme.Material.Light")]
     public class MainActivity : RunnerActivity

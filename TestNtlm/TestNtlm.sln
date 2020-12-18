@@ -18,9 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmAndroidXamarin.Android", "TestNtlmAndroidXamarin\TestNtlmAndroidXamarin.Android\TestNtlmAndroidXamarin.Android.csproj", "{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNtlmAndroidMonoWebRequestHandler", "TestNtlmAndroidMonoWebRequestHandler\TestNtlmAndroidMonoWebRequestHandler.csproj", "{23597E40-FB05-4FF3-A185-86A24C5646DE}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedTests\SharedTests.projitems*{1bd9bcaa-3790-430a-9d14-d8d75e09746a}*SharedItemsImports = 5
+		SharedTests\SharedTests.projitems*{23597e40-fb05-4ff3-a185-86a24c5646de}*SharedItemsImports = 4
 		SharedTests\SharedTests.projitems*{23bfefb3-dea2-4965-b6c1-b55b5961607f}*SharedItemsImports = 4
 		SharedTests\SharedTests.projitems*{b7502701-4953-40ad-ab9e-e0fb52ebedfe}*SharedItemsImports = 13
 		SharedTests\SharedTests.projitems*{cdd00d4c-62c5-44c4-98be-8a2f4579a365}*SharedItemsImports = 5
@@ -48,6 +51,12 @@ Global
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23BFEFB3-DEA2-4965-B6C1-B55B5961607F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{23597E40-FB05-4FF3-A185-86A24C5646DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23597E40-FB05-4FF3-A185-86A24C5646DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23597E40-FB05-4FF3-A185-86A24C5646DE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{23597E40-FB05-4FF3-A185-86A24C5646DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23597E40-FB05-4FF3-A185-86A24C5646DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23597E40-FB05-4FF3-A185-86A24C5646DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
